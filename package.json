@@ -1,0 +1,27 @@
+{
+  "name": "gardening.day",
+  "version": "0.0.1",
+  "description": "Gardening calender.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanying/gardening.day.git"
+  },
+  "keywords": [
+    "gardening"
+  ],
+  "author": "O.Yuanying",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuanying/gardening.day/issues"
+  },
+  "homepage": "https://github.com/yuanying/gardening.day#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  }
+}
