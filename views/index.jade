@@ -1,11 +1,23 @@
+- "use strict"
 doctype html
 html
   head
     title Your basic web app structure
   body
-    h1 Welcome to your basic web app structure
-    p
-      | Checkout the files to see how it is organized.
-    p
-      | Here is an example url
-    a(href="/comments/10") Comment with id 10
+    - var today = new Date()
+    - var cursor = new Date(today.getFullYear() - 1, 0)
+    - var lastYear = cursor.getFullYear()
+    - for (; cursor.getFullYear() < lastYear + 2; ) {
+      - var year = cursor.getFullYear();
+      - for (; cursor.getFullYear() == year; ) {
+          - var month = cursor.getMonth()
+          h1.mohth(id="#{year}-#{month+1}") #{year}/#{month + 1}
+          - for (; cursor.getMonth() == month; cursor.setDate(cursor.getDate() + 1)) {
+            - var date = cursor.getDate()
+            - var dayOfWeek = cursor.getDay()
+            p(id="#{year}-#{month+1}-#{date}",
+              class="week_#{dayOfWeek}")
+              | #{date}
+          - }
+      - }
+    - }
